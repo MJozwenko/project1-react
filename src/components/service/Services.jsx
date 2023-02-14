@@ -1,6 +1,6 @@
 import NewService from "./NewService";
 
-const ServicesList = ({ data }) => {
+const ServicesGrid = ({ data }) => {
   return (
     <section id="offer">
       <div className="container">
@@ -15,4 +15,4 @@ const ServicesList = ({ data }) => {
   );
 };
 
-export default ServicesList;
+export default ServicesGrid;

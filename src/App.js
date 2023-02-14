@@ -2,7 +2,7 @@ import "./App.css";
 import Nav from "./components/nav/Nav";
 import Header from "./components/header/Header";
 import Workers from "./components/workers/Workers";
-import ServicesList from "./components/service/Services";
+import ServicesGrid from "./components/service/Services";
 import Footer from "./components/footer/Footer";
 import { services } from "./data/ServicesData";
 
@@ -13,7 +13,7 @@ function App() {
       <Header />
       <main>
         <Workers />
-        <ServicesList data={services} />
+        <ServicesGrid data={services} />
         <Footer />
       </main>
     </>
