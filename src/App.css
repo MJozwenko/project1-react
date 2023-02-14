@@ -1,38 +1,328 @@
-.App {
-  text-align: center;
+html {
+  scroll-behavior: smooth;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1,
+h2 {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 42px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
+  padding-left: 14px;
+  padding-right: 14px;
+  max-width: 960px;
+  margin: auto;
+}
+
+/* NAVBAR */
+
+.navbar-container {
+  height: 50px;
+  margin: auto;
+  background: #4e4e4e;
   display: flex;
-  flex-direction: column;
+}
+
+.navbar {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
+}
+
+.main-nav {
+  display: none;
+}
+
+.main-nav-elem {
+  margin-left: 46px;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+}
+
+.main-nav-link {
+  text-decoration: none;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  color: #f1f1f1;
+}
+
+/* HEADER */
+
+.page-header {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  margin: auto;
+  height: calc(100vh - 50px);
+  background-position: center;
+  background-size: cover;
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.15),
+      rgba(0, 0, 0, 0.15)
+    ),
+    url(./data/samsung-memory-Mfnv3l9ZDgE-unsplash.jpg);
+}
+
+.header-content {
+  display: block;
+  width: 960px;
+  padding: 14px;
+  color: #ffffff;
+}
+
+.header-text1 {
+  max-width: 577px;
+  margin-bottom: 62px;
+}
+
+.header-text2 {
+  margin-bottom: 50px;
+}
+
+.button-header {
+  background-color: #c4c4c400;
+  border: 3px solid white;
   color: white;
+  padding: 7px 55px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 18px;
+  transition-duration: 1s;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+/* ABOUT US */
+
+#about_us {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: #f1f1f1;
+  overflow: auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.about_us-title {
+  color: #152d41;
+}
+
+.workers {
+  padding-top: 54px;
+}
+
+.full-name {
+  padding-top: 42px;
+  margin-bottom: 20px;
+}
+
+.worker_desc {
+  font-weight: 400;
+  text-align: justify;
+}
+
+.worker-img1 {
+  width: 197px;
+  height: 197px;
+  margin: auto;
+  border-radius: 50%;
+  background: url(./data/worker1.jpg);
+  background-position: center;
+  background-size: cover;
+  flex-shrink: 0;
+}
+
+.worker-img2 {
+  width: 197px;
+  height: 197px;
+  margin: auto;
+  border-radius: 50%;
+  background: url(./data/worker2.jpg);
+  background-position: center;
+  background-size: cover;
+  flex-shrink: 0;
+}
+
+/* OFFER */
+
+#offer {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: #405d78;
+  scroll-behavior: smooth;
+}
+
+.offer-title {
+  color: #ffffff;
+}
+
+.offer-grid {
+  display: grid;
+  justify-content: center;
+  gap: 36px;
+  padding-top: 83px;
+}
+.offer-grid-elem,
+.offer-grid-elem-dot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 338px;
+  width: 338px;
+  background-color: #f1f1f1;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+  transition-duration: 0.5s;
+}
+
+.offer-grid-elem-dot::before {
+  content: "";
+  width: 38px;
+  height: 38px;
+  background-color: #e07a64;
+  border-radius: 50%;
+  position: absolute;
+  margin-right: 340px;
+  margin-bottom: 335px;
+}
+
+/* FOOTER */
+
+.footer-bar {
+  padding-top: 38px;
+  padding-bottom: 38px;
+  background-color: #4e4e4e;
+}
+
+.footer-txt {
+  color: #ffffff;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.social {
+  list-style-type: none;
+  padding-top: 15px;
+  display: flex;
+}
+
+.ico {
+  padding: 9px;
+  color: #ffffff;
+}
+
+@media screen and (min-width: 490px) {
+  .main-nav {
+    list-style-type: none;
+    display: flex;
   }
-  to {
-    transform: rotate(360deg);
+  .offer-grid {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 198px 198px;
+    gap: 63px;
+    padding-top: 83px;
+  }
+  .offer-grid-elem {
+    height: 198px;
+    width: 198px;
+  }
+
+  .offer-grid-elem-dot::before {
+    margin-right: 200px;
+    margin-bottom: 195px;
+  }
+
+  .footer-bar {
+    height: 71px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+
+  .footer-content {
+    justify-content: space-between;
+  }
+  .social {
+    padding-top: 0px;
+  }
+
+  .ico {
+    padding-left: 9px;
+    padding-right: 9px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .workers {
+    display: flex;
+    align-items: center;
+  }
+  .worker_desc {
+    text-align: unset;
+  }
+
+  .workers--row:nth-of-type(even) {
+    flex-direction: row-reverse;
+    text-align: right;
+  }
+
+  .worker-img1 {
+    margin-right: 60px;
+  }
+
+  .worker-img2 {
+    margin-left: 60px;
+  }
+
+  .full-name {
+    padding-top: 0px;
+  }
+
+  .offer-grid {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 198px 198px 198px;
+    gap: 63px;
+    padding-top: 83px;
+  }
+  .offer-grid-elem {
+    height: 198px;
+    width: 198px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .contact:hover {
+    cursor: not-allowed;
+  }
+  .button-header:hover {
+    background-color: white;
+    color: black;
+  }
+  .offer-grid-elem:hover {
+    transform: scale(1.05);
   }
 }
