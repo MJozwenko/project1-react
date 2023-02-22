@@ -12,7 +12,6 @@ body {
 
 h1,
 h2 {
-  font-weight: 700;
   font-size: 36px;
   line-height: 42px;
 }
@@ -103,7 +102,7 @@ h2 {
   padding: 7px 55px;
   text-align: center;
   text-decoration: none;
-  font-weight: 700;
+
   font-size: 18px;
   transition-duration: 1s;
   cursor: pointer;
